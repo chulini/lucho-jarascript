@@ -1,0 +1,22 @@
+{
+  "name": "lucho-jarascript",
+  "main": "lucho-jarascript.js",
+  "homepage": "https://github.com/chulini/lucho-jarascript",
+  "authors": [
+    "Héctor Palma Téllez <hector@palmatellez.cl>"
+  ],
+  "description": "jQuery plugin that replaces all images with Lucho Jara pictures",
+  "moduleType": [],
+  "keywords": [
+    "luisjara",
+    "luis-jara"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
