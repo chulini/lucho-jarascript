@@ -1,7 +1,9 @@
-$( document ).ready(function() {
+var $j = jQuery.noConflict();
 
-    $('img').each(function(){
-        $(this).attr("src", randomLucho());
+$j( document ).ready(function() {
+
+    $j('img').each(function(){
+        $j(this).attr("src", randomLucho());
     });
     
 });
