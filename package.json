@@ -1,0 +1,26 @@
+{
+  "name": "lucho-jarascript",
+  "version": "1.0.0",
+  "description": "jQuery plugin that replaces all images with Lucho Jara pictures",
+  "main": "lucho-jarascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chulini/lucho-jarascript.git"
+  },
+  "keywords": [
+    "lucho",
+    "jara",
+    "luis",
+    "jara",
+    "lucho-jara"
+  ],
+  "author": "Héctor Palma Téllez <hector@palmatellez.cl> (http://hector.palmatellez.cl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chulini/lucho-jarascript/issues"
+  },
+  "homepage": "https://github.com/chulini/lucho-jarascript#readme"
+}
