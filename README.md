@@ -11,4 +11,4 @@ justo antes de ```</head>```
 
 
 ### Ejemplo
-![Lucho JaraScript en acción](https://i.imgur.com/eYFv33w.jpg "lalegal.cl con Lucho JaraScript")
+![Lucho JaraScript en acción](http://i.imgur.com/fqsPYIw.jpg "lalegal.cl con Lucho JaraScript")
