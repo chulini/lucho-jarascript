@@ -15,8 +15,22 @@ $j( document ).ready(function() {
     });
 
 
-    $j('img').each(function(){
-        $j(this).attr("src", randomLucho());
+    $j('img').on('load', function() {
+        if (this.src.indexOf('data:') > -1)
+            return;
+
+        var $img = $j(this),
+            ancho = $img.width(),
+            alto = $img.height();
+
+        $img.attr("src", 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')
+            .width(ancho)
+            .height(alto)
+            .css({
+                backgroundImage: 'url('+ randomLucho() +')',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+            });
     });
 });
 
