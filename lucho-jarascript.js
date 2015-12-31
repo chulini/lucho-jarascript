@@ -1,5 +1,7 @@
+//jQuery no conflict for compatibility with wordpress
 var $j = jQuery.noConflict();
 
+//Magic happens
 $j( document ).ready(function() {
     $j('h1').each(function(){
         $j(this).html("Luis Jara");
@@ -20,12 +22,12 @@ $j( document ).ready(function() {
             return;
 
         var $img = $j(this),
-            ancho = $img.width(),
-            alto = $img.height();
+            w = $img.width(),
+            h = $img.height();
 
         $img.attr("src", 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')
-            .width(ancho)
-            .height(alto)
+            .width(w)
+            .height(h)
             .css({
                 backgroundImage: 'url('+ randomLucho() +')',
                 backgroundSize: 'cover',
@@ -34,8 +36,9 @@ $j( document ).ready(function() {
     });
 });
 
+//Converts regular text to un golpe de suerte lyrics
 function textToGolpeDeSuerte(text){
-    var golpe = "Un golpe de suerte eh eh eh, espero despierto... igual que un espia en la oscuridad, espero volver a encontrar, un golpe de suerte, podria cambiar el tiempo perdido, que hay en el vacio que dejaste ayer al partir, un golpe de suerte eres tuu, Soy, un tipo tranquilo, tratando de no hacer mal, y ser buen amigo, yo soy uno mas, uno de tantos, en busca de ser feliz, de vez en cuando..., y con el tiempo de caminar, fui aprendiendo, ahora se que puedo llegar si me dan tiempo. Soy, un caso perdido, luchando para quebrarle la mano al destino, vivir a diario, es tan bulnerable, cuantas noches sin dormir, ardiendo de frioo, y con el tiempo de caminar, fui aprendiendo, ahora se que puedo, llegar si me doy tiempo";
+    var golpe = "Un golpe de suerte, espero despierto... igual que un espia en la oscuridad, espero volver a encontrar, un golpe de suerte, podria cambiar el tiempo perdido, que hay en el vacio que dejaste ayer al partir, un golpe de suerte eres tu. Soy, un tipo tranquilo, tratando de no hacer mal, y ser buen amigo, yo soy uno mas, uno de tantos, en busca de ser feliz, de vez en cuando... y con el tiempo de caminar, fui aprendiendo, ahora se que puedo llegar si me dan tiempo. Soy, un caso perdido, luchando para quebrarle la mano al destino, vivir a diario, es tan bulnerable, cuantas noches sin dormir, ardiendo de frioo, y con el tiempo de caminar, fui aprendiendo, ahora se que puedo, llegar si me doy tiempo";
     var golpe_words = golpe.split(" ");
 
     var text_words = text.split(" ");
