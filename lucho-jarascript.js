@@ -16,24 +16,27 @@ $j( document ).ready(function() {
         $j(this).html(textToGolpeDeSuerte(text));
     });
 
-
-    $j('img').on('load', function() {
-        if (this.src.indexOf('data:') > -1)
-            return;
-
-        var $img = $j(this),
-            w = $img.width(),
-            h = $img.height();
-
-        $img.attr("src", 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')
-            .width(w)
-            .height(h)
-            .css({
-                backgroundImage: 'url('+ randomLucho() +')',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-            });
+    $j('img').each(function(){
+        $j(this).attr("src", randomLucho());
     });
+    
+    // $j('img').on('load', function() {
+    //     if (this.src.indexOf('data:') > -1)
+    //         return;
+
+    //     var $img = $j(this),
+    //         w = $img.width(),
+    //         h = $img.height();
+
+    //     $img.attr("src", 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')
+    //         .width(w)
+    //         .height(h)
+    //         .css({
+    //             backgroundImage: 'url('+ randomLucho() +')',
+    //             backgroundSize: 'cover',
+    //             backgroundPosition: 'center'
+    //         });
+    // });
 });
 
 //Converts regular text to un golpe de suerte lyrics
