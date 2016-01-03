@@ -16,27 +16,31 @@ $j( document ).ready(function() {
         $j(this).html(textToGolpeDeSuerte(text));
     });
 
-    $j('img').each(function(){
-        $j(this).attr("src", randomLucho());
-    });
-    
-    // $j('img').on('load', function() {
-    //     if (this.src.indexOf('data:') > -1)
-    //         return;
+    setInterval(function(){
+        $j('img').each(function(){
 
-    //     var $img = $j(this),
-    //         w = $img.width(),
-    //         h = $img.height();
+            if (this.src.indexOf('data:') > -1 || $j(this).hasClass("luchojared"))
+                return;
 
-    //     $img.attr("src", 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')
-    //         .width(w)
-    //         .height(h)
-    //         .css({
-    //             backgroundImage: 'url('+ randomLucho() +')',
-    //             backgroundSize: 'cover',
-    //             backgroundPosition: 'center'
-    //         });
-    // });
+            // console.log("luchojared!");
+            $j(this).addClass("luchojared");
+            var $img = $j(this),
+                w = $img.width(),
+                h = $img.height();
+            
+
+            $img.attr("src", 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')
+                .width(w)
+                .height(h)
+                .css({
+                    backgroundImage: 'url('+ randomLucho() +')',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
+                });
+        });
+            
+    },500);
+
 });
 
 //Converts regular text to un golpe de suerte lyrics
