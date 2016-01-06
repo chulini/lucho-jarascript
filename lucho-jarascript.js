@@ -1,47 +1,57 @@
-//jQuery no conflict for compatibility with wordpress
-var $j = jQuery.noConflict();
-
 //Magic happens
-$j( document ).ready(function() {
-    $j('h1').each(function(){
-        $j(this).html("Luis Jara");
-    });
+(function ($) {
 
-    $j('h2, h3, h4, h5, h6').each(function(){
-        $j(this).html("Un golpe de suerte");
-    });
+    $.fn.luchoJaraScript = function () {
 
-    $j('p').each(function(){
-        var text = $j(this).text();
-        $j(this).html(textToGolpeDeSuerte(text));
-    });
+        var este = this;
 
-    setInterval(function(){
-        $j('img').each(function(){
+        este.find('h1').each(function () {
+            $(this).html("Luis Jara");
+        });
 
-            if (this.src.indexOf('data:') > -1 || $j(this).hasClass("luchojared"))
-                return;
+        este.find('h2, h3, h4, h5, h6').each(function () {
+            $(this).html("Un golpe de suerte");
+        });
 
-            // console.log("luchojared!");
-            $j(this).addClass("luchojared");
-            var $img = $j(this),
-                w = $img.width(),
-                h = $img.height();
-            
+        este.find('p').each(function(){
+            var text = $(this).text();
+            $(this).html(textToGolpeDeSuerte(text));
+        });
 
-            $img.attr("src", 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')
-                .width(w)
-                .height(h)
-                .css({
+        setInterval(function(){
+            este.find('img').each(function(){
+
+                if (this.src.indexOf('data:') > -1 || $(this).hasClass("luchojared"))
+                    return;
+
+                // console.log("luchojared!");
+                $(this).addClass("luchojared");
+                var $img = $(this),
+                    w = $img.width(),
+                    h = $img.height();
+
+
+                $img.attr("src", 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')
+                    .width(w)
+                    .height(h)
+                    .css({
                     backgroundImage: 'url('+ randomLucho() +')',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 });
-        });
-            
-    },500);
+            });
 
-});
+        },500);
+
+        return this;
+
+    }
+
+})(jQuery);
+
+/*jQuery(document).ready(function($){
+    $('body').luchoJaraScript();
+});*/
 
 //Converts regular text to un golpe de suerte lyrics
 function textToGolpeDeSuerte(text){
