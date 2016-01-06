@@ -7,7 +7,13 @@ Pone
 ```html
 <script type="text/javascript" src="http://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js"></script>
 ```
-justo antes de ```</head>```
+justo antes de ```</head>``` y 
+```html
+<script>    
+    $('body').luchoJaraScript();
+</script>
+```
+justo antes de cerrar el tag ```<body>```
 
 ### Instalación con Bower
 
