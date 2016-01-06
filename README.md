@@ -13,7 +13,7 @@ justo antes de ```</head>``` y
     $('body').luchoJaraScript();
 </script>
 ```
-justo antes de cerrar el tag ```<body>```
+justo antes de ```</body>```
 
 ### Instalación con Bower
 
