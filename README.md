@@ -48,4 +48,4 @@ En tu proyecto, ejecuta `npm i lucho-jarascript`. Luego de eso, estará el JS en
 ```
 
 ### Ejemplo
-![Lucho JaraScript en acción](http://i.imgur.com/JecxWAU.png "lalegal.cl con Lucho JaraScript")
+![Lucho JaraScript en acción](http://i.imgur.com/PL7kaqf.png "emol.com con Lucho JaraScript")
