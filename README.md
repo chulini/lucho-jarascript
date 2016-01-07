@@ -7,26 +7,29 @@ Pone
 ```html
 <script type="text/javascript" src="http://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js"></script>
 ```
-justo antes de ```</head>``` y 
-```html
-<script>    
-    $('body').luchoJaraScript();
-</script>
-```
-justo antes de ```</body>```.
+justo antes de ```</head>```
 
 ### ¿No te basta con cambiar la letra e imágenes?
 
-Puedes llevar la experiencia al siguiente nivel, tan solo basta con poner
+Puedes llevar la experiencia al siguiente nivel. Basta con poner
 ```html
 <script>    
-    $('body').luchoJaraScript({
+    var customLucho = {
         player: true,
         autoplay: true
-    });
+    };
 </script>
 ```
-y podrás disfrutar de toda una experiencia multimedia.
+justo antes de ```</body>``` y podrás disfrutar de toda una experiencia multimedia.
+
+### Opciones para customLucho
+
+| Opción | ¿Qué hace? | Valor por Defecto | Valores que puede tomar |
+| :----: | :--------: | :----------------:| :---------------------: |
+| target | Definir donde quieres que aparezca *Luis Jara* | **body** (Usualmente, toda la página)| Un selector de css (Idealmente que sea único si es que se usa junto con **player**) |
+| player | Agrega un botón en el extremo superior derecho del target que te permitirá disfrutar del video de *Un Golpe de Suerte* | **false** | **true** para disfrutar del video |
+| autoplay | No necesitarás apretar el botón para disfrutar de *Un Golpe de Suerte* (La opcion *player* debe tener el valor **true** para que funcione) | **false** | **true** para disfrutar de *Un Golpe de Suerte* sin intervención humana |  
+
 
 ### Instalación con Bower
 

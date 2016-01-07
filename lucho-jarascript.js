@@ -131,6 +131,10 @@
 
 })(jQuery);
 
-/*jQuery(document).ready(function($){
-    $('body').luchoJaraScript();
-});*/
+jQuery(document).ready(function($){
+    if(typeof customLucho !== 'undefined'){
+        $(customLucho.target ? customLucho.target : 'body').luchoJaraScript(customLucho);
+    }else{
+        $('body').luchoJaraScript();
+    }
+});
