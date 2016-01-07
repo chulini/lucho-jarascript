@@ -128,6 +128,8 @@
                 $containerDiv.append($button).append($player).appendTo($este);
             }
 
+            console.log('Loaded Lucho JaraScript');
+
             return $este;
 
         };
