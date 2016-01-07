@@ -170,10 +170,12 @@
 
     //load jQuery if is not defined
     if(typeof jQuery === 'undefined'){
+        console.log('Loading jQuery...');
         loadScript('https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',function(){
             loadLuchoScript(jQuery);
         });
     }else{
+        console.log('jQuery...');
         loadLuchoScript(jQuery);
     }
 
