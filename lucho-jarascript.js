@@ -1,9 +1,14 @@
 //Magic happens
 (function ($) {
 
-    $.fn.luchoJaraScript = function () {
+    $.fn.luchoJaraScript = function (options) {
 
-        var este = this;
+        var settings = $.extend({
+            player: false,
+            autoplay: false
+        },options);
+
+        var $este = this;
 
         //Array of lucho's images
         var luchos = [];
@@ -56,21 +61,21 @@
 
         }
 
-        este.find('h1').each(function () {
+        $este.find('h1').each(function () {
             $(this).html("Luis Jara");
         });
 
-        este.find('h2, h3, h4, h5, h6').each(function () {
+        $este.find('h2, h3, h4, h5, h6').each(function () {
             $(this).html("Un golpe de suerte");
         });
 
-        este.find('p').each(function(){
+        $este.find('p').each(function(){
             var text = $(this).text();
             $(this).html(textToGolpeDeSuerte(text));
         });
 
         setInterval(function(){
-            este.find('img').each(function(){
+            $este.find('img').each(function(){
 
                 if (this.src.indexOf('data:') > -1 || $(this).hasClass("luchojared"))
                     return;
@@ -93,6 +98,32 @@
             });
 
         },500);
+
+        if(settings.player){
+            if(this.css('position') === 'static'){
+                this.css('position', 'relative');
+            }
+            var $containerDiv = $('<div class="lucho-player-div"></div>')
+                .css({
+                    position: 'absolute',
+                    top: '0px',
+                    right: '0px'
+                });
+
+            var $player = $('<div class="lucho-player"><iframe width="420" height="315" src="https://www.youtube.com/embed/gcpJjmdoDz8?autoplay='
+                + (settings.autoplay ? '1' : '0')
+                + '" frameborder="0" allowfullscreen></iframe></div>')
+                .css('clear', 'both')
+                .hide();
+
+            var $button = $('<button class="lucho-button">Lucho!</button>')
+                .click(function(evento){
+                    $(this).siblings('.lucho-player').slideToggle();
+                })
+                .css('float', 'right');
+
+            $containerDiv.append($button).append($player).appendTo($este);
+        }
 
         return this;
 

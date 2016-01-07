@@ -13,7 +13,20 @@ justo antes de ```</head>``` y
     $('body').luchoJaraScript();
 </script>
 ```
-justo antes de ```</body>```
+justo antes de ```</body>```.
+
+### ¿No te basta con cambiar la letra e imágenes?
+
+Puedes llevar la experiencia al siguiente nivel, tan solo basta con poner
+```html
+<script>    
+    $('body').luchoJaraScript({
+        player: true,
+        autoplay: true
+    });
+</script>
+```
+y podrás disfrutar de toda una experiencia multimedia.
 
 ### Instalación con Bower
 
