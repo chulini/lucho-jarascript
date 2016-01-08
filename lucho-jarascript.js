@@ -107,10 +107,11 @@
                     $este.css('position', 'relative');
                 }
                 var $containerDiv = $('<div class="lucho-player-div"></div>')
-                .css({
-                    position: 'absolute',
-                    top: '0px',
-                    right: '0px'
+                    .css({
+                        position: 'absolute',
+                        top: '0px',
+                        right: '0px',
+                        'z-index': 2147483646
                 });
 
                 var $player = $('<div class="lucho-player"><iframe width="420" height="315" src="https://www.youtube.com/embed/gcpJjmdoDz8?autoplay='
@@ -144,7 +145,7 @@
 
     };
 
-    //function to load jQuery dinamically (https://www.nczonline.net/blog/2009/07/28/the-best-way-to-load-external-javascript/)
+    //function to load scripts dynamically (https://www.nczonline.net/blog/2009/07/28/the-best-way-to-load-external-javascript/)
     function loadScript(url, callback){
 
         var script = document.createElement("script")
@@ -170,13 +171,13 @@
 
     //load jQuery if is not defined
     if(typeof jQuery === 'undefined'){
-        console.log('Loading jQuery...');
-        loadScript('https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',function(){
+        console.log('Loading jQuery 1.11.3 ...');
+        loadScript('http://code.jquery.com/jquery-1.11.3.min.js',function(){
             loadLuchoScript(jQuery);
         });
     }else{
-        console.log('jQuery...');
         loadLuchoScript(jQuery);
     }
 
 })();
+
