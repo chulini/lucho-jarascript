@@ -40,12 +40,24 @@ En tu proyecto, corre `bower i lucho-jarascript`. Luego de eso, estará el JS en
 En tu proyecto, ejecuta `npm i lucho-jarascript`. Luego de eso, estará el JS en `node_modules/lucho-jarascript/lucho-jarascript.js` para ser llamado desde tu HTML.
 
 ### Quiero luchojarizar toda la internet ¿Qué puedo hacer?
+
+**Opción 1**
+
 - Abre la pagina que quieres luchojarizar
 - Escribe ```javascript:``` (ojo: ***escribe***, no funciona copiar y pegar)
 - Pega esto justo después de ```javascript:``` y apreta enter:
 ```javascript
 (function(){var root=this,d=root.document,j=d.createElement('script');j.type='text/javascript';j.src='http://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js?' + Math.random();d.body.appendChild(j);}());
 ```
+
+**Opción 2 (Testeado en Firefox y Chromium)**
+
+- Crea un nuevo marcador o favorito en tu navegador de preferencia
+- Pon el nombre que quieras al nuevo marcador y donde tengas que poner el link del marcador pega:
+```javascript
+javascript: (function(){var root=this,d=root.document,j=d.createElement('script');j.type='text/javascript';j.src='http://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js?' + Math.random();d.body.appendChild(j);}());
+```
+- Anda a la página que quieras luchojarizar y apreta tu nuevo marcador para cambiarle el look
 
 ### Ejemplo
 ![Lucho JaraScript en acción](http://i.imgur.com/PL7kaqf.png "emol.com con Lucho JaraScript")
