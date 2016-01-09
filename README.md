@@ -26,9 +26,10 @@ justo antes de ```</body>``` y podrás disfrutar de toda una experiencia multime
 
 | Opción | ¿Qué hace? | Valor por Defecto | Valores que puede tomar |
 | :----: | :--------: | :----------------:| :---------------------: |
-| target | Definir donde quieres que aparezca *Luis Jara* | **body** (Usualmente, toda la página)| Un selector de css (Idealmente que sea único si es que se usa junto con **player**) |
-| player | Agrega un botón en el extremo superior derecho del target que te permitirá disfrutar del video de *Un Golpe de Suerte* | **false** | **true** para disfrutar del video |
-| autoplay | No necesitarás apretar el botón para disfrutar de *Un Golpe de Suerte* (La opcion *player* debe tener el valor **true** para que funcione) | **false** | **true** para disfrutar de *Un Golpe de Suerte* sin intervención humana |  
+| target | Definir donde quieres que aparezca *Luis Jara* | **body** (Usualmente, toda la página)| Un selector de css (Idealmente que sea único si es que se usa junto con *player*) |
+| player | Agrega un botón en el extremo superior derecho del *target* que te permitirá disfrutar del video de *Un Golpe de Suerte* | **false** | **true** para disfrutar del video |
+| autoplay | No necesitarás apretar el botón para disfrutar de *Un Golpe de Suerte* (La opcion *player* debe tener el valor **true** para que funcione) | **false** | **true** para disfrutar de *Un Golpe de Suerte* sin intervención humana |
+| english | *Luis Jara* can sing in English | **false** | **true** to enjoy English Lyrics |
 
 
 ### Instalación con Bower

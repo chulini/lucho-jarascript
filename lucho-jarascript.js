@@ -7,8 +7,9 @@
 
             var settings = $.extend({
                 player: false,
-                autoplay: false
-            },options);
+                autoplay: false,
+                english: false
+            }, options);
 
             var $este = this;
 
@@ -43,9 +44,22 @@
             luchos.push("http://i.imgur.com/Aei4AAF.jpg");
             luchos.push("http://i.imgur.com/jkB4Zn5.jpg");
 
-            //Un golpe de suerteeeee, eeeeeeEEEEEEeeeeeHHHH
-            var golpe = "Un golpe de suerte, espero despierto... igual que un espia en la oscuridad, espero volver a encontrar, un golpe de suerte, podria cambiar el tiempo perdido, que hay en el vacio que dejaste ayer al partir, un golpe de suerte eres tu. Soy, un tipo tranquilo, tratando de no hacer mal, y ser buen amigo, yo soy uno mas, uno de tantos, en busca de ser feliz, de vez en cuando... y con el tiempo de caminar, fui aprendiendo, ahora se que puedo llegar si me dan tiempo. Soy, un caso perdido, luchando para quebrarle la mano al destino, vivir a diario, es tan bulnerable, cuantas noches sin dormir, ardiendo de frioo, y con el tiempo de caminar, fui aprendiendo, ahora se que puedo, llegar si me doy tiempo";
-            var golpe_words = golpe.split(" ");
+            //Languages supported
+            var languages = {
+                spanish: {
+                    title: 'Un golpe de suerte',
+                    golpe: 'Un golpe de suerte, espero despierto... igual que un espia en la oscuridad, espero volver a encontrar, un golpe de suerte, podria cambiar el tiempo perdido, que hay en el vacio que dejaste ayer al partir, un golpe de suerte eres tu. Soy, un tipo tranquilo, tratando de no hacer mal, y ser buen amigo, yo soy uno mas, uno de tantos, en busca de ser feliz, de vez en cuando... y con el tiempo de caminar, fui aprendiendo, ahora se que puedo llegar si me dan tiempo. Soy, un caso perdido, luchando para quebrarle la mano al destino, vivir a diario, es tan bulnerable, cuantas noches sin dormir, ardiendo de frioo, y con el tiempo de caminar, fui aprendiendo, ahora se que puedo, llegar si me doy tiempo.',
+                    url: 'https://www.youtube.com/embed/gcpJjmdoDz8'
+                },
+                english: {
+                    title: 'A Stroke of Luck',
+                    golpe: "A Strock of Luck, I lie awake waiting, just like a spy in the dark... hoping to find that spark... A Stroke of Luck could change my life, all the lost time... and fill the emptiness that you left, since you're not mine, my Stroke of Luck is you. I... am just a normal guy... trying to do the right thing, to give it a try... I'm just one more... of the rank and file, trying to be happy, once in a while... and after years of walking by, I've learned on the ride, now I know that I can make it, given the time. I... am a lost cause... fighting to put destiny on pause... every day my life is exposed... so many sleepless nights, burning with cold... and after years of walking by, I've learned on the ride, now I know I can make it, given the time.",
+                    url: 'https://www.youtube.com/embed/noOaxZym9xk'
+                }
+            };
+
+            var luchoObject = settings.english ? languages.english : languages.spanish;
+            var golpe_words = luchoObject.golpe.split(" ");
 
             //Returns random image of lucho jara
             function randomLucho(){
@@ -68,7 +82,7 @@
             });
 
             $este.find('h2, h3, h4, h5, h6').each(function () {
-                $(this).html("Un golpe de suerte");
+                $(this).html(luchoObject.title);
             });
 
             $este.find('p').each(function(){
@@ -101,7 +115,7 @@
 
             },500);
 
-            //
+            //Un Golpe de Suerte Player
             if(settings.player){
                 if($este.css('position') === 'static'){
                     $este.css('position', 'relative');
@@ -114,7 +128,7 @@
                         'z-index': 2147483646
                 });
 
-                var $player = $('<div class="lucho-player"><iframe width="420" height="315" src="https://www.youtube.com/embed/gcpJjmdoDz8?autoplay='
+                var $player = $('<div class="lucho-player"><iframe width="420" height="315" src="'+ luchoObject.url +'?autoplay='
                                 + (settings.autoplay ? '1' : '0')
                                 + '" frameborder="0" allowfullscreen></iframe></div>')
                 .css('clear', 'both')
