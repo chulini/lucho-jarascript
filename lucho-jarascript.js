@@ -53,7 +53,7 @@
                 },
                 english: {
                     title: 'A Stroke of Luck',
-                    golpe: "A Strock of Luck, I lie awake waiting, just like a spy in the dark... hoping to find that spark... A Stroke of Luck could change my life, all the lost time... and fill the emptiness that you left, since you're not mine, my Stroke of Luck is you. I... am just a normal guy... trying to do the right thing, to give it a try... I'm just one more... of the rank and file, trying to be happy, once in a while... and after years of walking by, I've learned on the ride, now I know that I can make it, given the time. I... am a lost cause... fighting to put destiny on pause... every day my life is exposed... so many sleepless nights, burning with cold... and after years of walking by, I've learned on the ride, now I know I can make it, given the time.",
+                    golpe: "A Stroke of Luck, I lie awake waiting, just like a spy in the dark... hoping to find that spark... A Stroke of Luck could change my life, all the lost time... and fill the emptiness that you left, since you're not mine, my Stroke of Luck is you. I... am just a normal guy... trying to do the right thing, to give it a try... I'm just one more... of the rank and file, trying to be happy, once in a while... and after years of walking by, I've learned on the ride, now I know that I can make it, given the time. I... am a lost cause... fighting to put destiny on pause... every day my life is exposed... so many sleepless nights, burning with cold... and after years of walking by, I've learned on the ride, now I know I can make it, given the time.",
                     url: 'https://www.youtube.com/embed/noOaxZym9xk'
                 }
             };
