@@ -60,5 +60,13 @@ javascript: (function(){var root=this,d=root.document,j=d.createElement('script'
 ```
 - Anda a la página que quieras luchojarizar y apreta tu nuevo marcador para cambiarle el look
 
+**Opción 2.2 con autoplay (Testeado en Firefox y Chromium)**
+- Pon el nombre que quieras al nuevo marcador y donde tengas que poner el link del marcador pega:
+```javascript
+javascript: (function(){var root=this,d=root.document,i=d.createElement('script'),j=d.createElement('script');i.textContent='var customLucho = {player: true,autoplay: true};';j.type='text/javascript';j.src='http://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js?' + Math.random();d.body.appendChild(i);d.body.appendChild(j);}());
+```
+- Anda a la página que quieras luchojarizar y apreta tu nuevo marcador para cambiarle el look
+
+
 ### Ejemplo
 ![Lucho JaraScript en acción](http://i.imgur.com/PL7kaqf.png "emol.com con Lucho JaraScript")
