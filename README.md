@@ -5,7 +5,7 @@ Plugin jQuery que reemplaza todas las imágenes de una pagina web por imágenes 
 ### Uso Rápido
 Pone
 ```html
-<script type="text/javascript" src="http://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js"></script>
+<script type="text/javascript" src="https://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js"></script>
 ```
 justo antes de ```</head>```
 
@@ -48,7 +48,7 @@ En tu proyecto, ejecuta `npm i lucho-jarascript`. Luego de eso, estará el JS en
 - Escribe ```javascript:``` (ojo: ***escribe***, no funciona copiar y pegar)
 - Pega esto justo después de ```javascript:``` y apreta enter:
 ```javascript
-(function(){var root=this,d=root.document,j=d.createElement('script');j.type='text/javascript';j.src='http://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js?' + Math.random();d.body.appendChild(j);}());
+(function(){var root=this,d=root.document,j=d.createElement('script');j.type='text/javascript';j.src='https://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js?' + Math.random();d.body.appendChild(j);}());
 ```
 
 **Opción 2 (Testeado en Firefox y Chromium)**
@@ -56,7 +56,7 @@ En tu proyecto, ejecuta `npm i lucho-jarascript`. Luego de eso, estará el JS en
 - Crea un nuevo marcador o favorito en tu navegador de preferencia
 - Pon el nombre que quieras al nuevo marcador y donde tengas que poner el link del marcador pega:
 ```javascript
-javascript: (function(){var root=this,d=root.document,j=d.createElement('script');j.type='text/javascript';j.src='http://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js?' + Math.random();d.body.appendChild(j);}());
+javascript: (function(){var root=this,d=root.document,j=d.createElement('script');j.type='text/javascript';j.src='https://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js?' + Math.random();d.body.appendChild(j);}());
 ```
 - Anda a la página que quieras luchojarizar y apreta tu nuevo marcador para cambiarle el look
 
