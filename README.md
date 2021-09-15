@@ -3,7 +3,7 @@
 Plugin jQuery que reemplaza todas las imágenes de una pagina web por imágenes de lucho jara y todos los textos por las líricas de un golpe de suerte.
 
 ### Uso Rápido
-Pone
+Pon
 ```html
 <script type="text/javascript" src="https://rawgit.com/chulini/lucho-jarascript/master/lucho-jarascript.js"></script>
 ```
